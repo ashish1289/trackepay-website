@@ -10,6 +10,10 @@ import {
   Palette,
   ArrowRight,
   ChevronRight,
+  Mail,
+  User2, // ✅ alias fix
+  Settings,
+
 } from "lucide-react";
 import CTABanner from "@/components/shared/CTABanner";
 
@@ -60,6 +64,27 @@ const serviceCards = [
     title: "Branding Building Packages",
     description:
       "Logo, colors, messaging, and visuals that build a cohesive and memorable brand identity for your business.",
+    href: "/branding-building-packages",
+  },
+  {
+    icon: Mail,
+    title: "Email Marketing",
+    description:
+      "Deliver the right message at the right time with smart email automation that engages users and turns prospects into customers.",
+    href: "/data-analytics-services",
+  },
+  {
+    icon: User2,
+    title: "LinkedIn Outreach",
+    description:
+      "Connect with the right audience through personalized LinkedIn outreach strategies that build relationships, generate leads, and drive business growth.",
+    href: "/digital-marketing-services",
+  },
+  {
+    icon: Settings,
+    title: "Costom Application Devlopment",
+    description:
+      "Transform your ideas into powerful digital solutions with custom-built applications designed for performance, scalability, and innovation.",
     href: "/branding-building-packages",
   },
 ];
@@ -228,7 +253,7 @@ export default function TechnologyPage() {
           </div>
           <div className="relative max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-lg">
             <Image
-              src="/images/wp/Hosting-Trust-Image.webp"
+              src="/images/wp/Gemini_Generated_Image_oj4tu1oj4tu1oj4t.png"
               alt="Trackepay trusted hosting and technology platform"
               width={1024}
               height={600}

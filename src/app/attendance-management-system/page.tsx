@@ -24,6 +24,7 @@ export default function AttendanceManagementSystemPage() {
       breadcrumbLabel="Attendance Management System"
       contentTitle="Attendance Management System"
       contentDescription="Take control of your workforce attendance with a robust system that integrates seamlessly with biometric devices, mobile apps, and web portals. Get real-time visibility into employee attendance, leaves, and shifts."
+      heroImageSrc="/images/wp/Gemini_Generated_Image_y5vyv6y5vyv6y5vy.png"
       featureChecklist={[
         "Real-Time Check-In/Out",
         "Leave Management",

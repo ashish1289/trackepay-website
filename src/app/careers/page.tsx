@@ -34,7 +34,17 @@ export default function CareersPage() {
             </div>
           </div>
         </div>
+        <div className="flex justify-center mt-7">
+          <div className="overflow-hidden rounded-2xl">
+            <iframe
+              src="https://share.deftform.com/a4a4cc35-b561-4606-92ae-72c38ce5806d?embed=1..."
+              className="w-[1000px] h-[1610px] border-0"
+              loading="eager"
+            />
+          </div>
+        </div>
       </section>
+
 
       <CTABanner />
     </>

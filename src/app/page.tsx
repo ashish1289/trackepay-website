@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import Hero from "@/components/home/Hero";
+
 import {
   ArrowRight,
   CheckCircle2,
@@ -143,68 +145,10 @@ const serviceCategories = [
 export default function Home() {
   return (
     <>
+        <Hero />
       {/* ═══════════ 1. HERO — Dark ═══════════ */}
-      <section className="relative min-h-screen flex items-center justify-center bg-[#0a0a0a] overflow-hidden">
-        {/* Dot grid background */}
-        <div className="absolute inset-0 bg-dot-pattern opacity-[0.04]" />
-
-        {/* Radial orange glow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[40%] w-[700px] h-[500px] bg-[#F48120]/10 rounded-full blur-[120px] pointer-events-none" />
-
-        <div className="relative z-10 mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 text-center py-32">
-          {/* Trust badge */}
-          <div className="animate-fade-up inline-flex items-center gap-2.5 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 mb-8">
-            <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
-            </span>
-            <span className="text-sm text-white/60">
-              Trusted by 50+ police stations &amp; 150+ enterprises
-            </span>
-          </div>
-
-          {/* Headline */}
-          <h1
-            className="animate-fade-up-delay-1 text-5xl sm:text-6xl lg:text-8xl font-extrabold text-white tracking-tight leading-[1.05]"
-            style={{ fontFamily: "var(--font-display)" }}
-          >
-            Softwares that Governments
-            <br className="hidden sm:block" /> &amp; Enterprises{" "}
-            <span className="text-gradient">rely on!</span>
-          </h1>
-
-          {/* Subtitle */}
-          <p className="animate-fade-up-delay-2 mt-8 text-lg sm:text-xl text-white/50 max-w-2xl mx-auto leading-relaxed">
-            From smart policing systems for Indian law enforcement to enterprise
-            SaaS&nbsp;&mdash; Trackepay delivers mission-critical technology
-            with 99.9% uptime.
-          </p>
-
-          {/* CTAs */}
-          <div className="animate-fade-up-delay-3 mt-10 flex flex-col sm:flex-row items-center justify-center gap-5">
-            <Link
-              href="/contact"
-              className="inline-flex items-center bg-[#F48120] hover:bg-[#d97218] text-white font-semibold rounded-full px-8 py-4 text-base transition-all duration-200 shadow-lg shadow-orange-500/20 hover:shadow-xl hover:shadow-orange-500/30"
-            >
-              Book a Demo
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-            <Link
-              href="/portfolio"
-              className="text-white/50 hover:text-white text-base font-medium transition-colors inline-flex items-center gap-1"
-            >
-              View Our Work
-              <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
-
-          {/* Trust line */}
-          <p className="animate-fade-up-delay-4 mt-8 text-sm text-white/25 tracking-wide">
-            &#10003; Free consultation &nbsp;&middot;&nbsp; &#10003; No
-            commitment &nbsp;&middot;&nbsp; &#10003; 24/7 support
-          </p>
-        </div>
-      </section>
+     
+     
 
       {/* ═══════════ 2. LOGO TICKER ═══════════ */}
       <section className="py-12 bg-white border-b border-slate-100">
@@ -640,6 +584,7 @@ export default function Home() {
 
       {/* ═══════════ 9. CTA BANNER ═══════════ */}
       <CTABanner />
+       
     </>
   );
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Phone, Mail, MapPin, FileText } from "lucide-react";
 import Link from "next/link";
 import CTABanner from "@/components/shared/CTABanner";
+import PhoneField from "@/components/PhoneField";
 
 export const metadata: Metadata = {
   title: "Contact Us | Trackepay",
@@ -31,13 +32,91 @@ export default function ContactPage() {
 
           {/* Form Placeholder */}
           <div className="max-w-3xl mx-auto mt-12">
-            <div className="min-h-[500px] bg-slate-50 rounded-2xl border-2 border-dashed border-slate-300 flex items-center justify-center">
-              <div className="text-center">
-                <FileText className="w-12 h-12 text-slate-400 mx-auto mb-4" />
-                <p className="text-slate-500 text-sm font-medium">
-                  Contact form will be embedded here
-                </p>
-              </div>
+            <div className="bg-white p-8 rounded-2xl shadow-md border border-slate-200">
+
+              <h2 className="text-3xl font-bold text-center mb-8">Contact Us</h2>
+
+              <form className="space-y-6">
+
+                {/* Name */}
+                <div>
+                  <label className="block mb-2 font-medium">
+                    Name <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Enter your name"
+                    className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-400"
+                  />
+                </div>
+
+                {/* Phone */}
+                <div>
+                  <label className="block mb-2 font-medium">
+                    Phone Number <span className="text-red-500">*</span>
+                  </label>
+
+                  <PhoneField />
+                </div>
+
+                {/* Email */}
+                <div>
+                  <label className="block mb-2 font-medium">
+                    Email <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="email"
+                    placeholder="Enter your email"
+                    className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-400"
+                  />
+                </div>
+
+                {/* Company */}
+                <div>
+                  <label className="block mb-2 font-medium">
+                    Company Name
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Enter company name"
+                    className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-400"
+                  />
+                </div>
+
+                {/* Inquiry */}
+                <div>
+                  <label className="block mb-2 font-medium">
+                    Inquiry Type <span className="text-red-500">*</span>
+                  </label>
+                  <select className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-400">
+                    <option></option>
+                    <option>Service Request</option>
+                    <option>Product Request</option>
+                    <option>Support Request</option>
+                  </select>
+                </div>
+
+                {/* Message */}
+                <div>
+                  <label className="block mb-2 font-medium">
+                    Message <span className="text-red-500">*</span>
+                  </label>
+                  <textarea
+                    rows={4}
+                    placeholder="Write your message..."
+                    className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-400"
+                  ></textarea>
+                </div>
+
+                {/* Button */}
+                <button
+                  type="submit"
+                  className="w-full bg-black text-white py-4 rounded-xl font-semibold hover:bg-gray-900 transition"
+                >
+                  Submit
+                </button>
+
+              </form>
             </div>
           </div>
         </div>
